@@ -8,7 +8,7 @@ Construido con **HTML5 semántico y CSS3 puro**, sin JavaScript ni frameworks, c
 
 ## 🔗 Demo
 
-**URL de Vercel:** _(pendiente — se completa después del deploy)_
+**URL de Vercel:** (https://landing-portfolio-tecnicatura.vercel.app/)
 
 **Perfil de GitHub:** [github.com/federicosd06-dev](https://github.com/federicosd06-dev)
 
