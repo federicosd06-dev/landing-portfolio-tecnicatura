@@ -1,0 +1,677 @@
+/* =========================================================
+   VARIABLES (paleta neutra provisoria — se define la estética
+   final más adelante, todo el color vive acá para reemplazar
+   fácil)
+   ========================================================= */
+:root {
+  --color-bg: #0d0d14;
+  --color-bg-alt: #16161f;
+  --color-text: #e8e8f0;
+  --color-text-muted: #9a9ab0;
+  --color-primary: #00f0ff;
+  --color-accent: #ff2079;
+  --color-border: #2a2a3a;
+
+  --font-display: "Orbitron", sans-serif;
+  --font-body: "Space Mono", monospace;
+
+  --radius: 2px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+
+  --max-width: 1100px;
+}
+
+/* Firma cyberpunk: glow en título y bordes con neón */
+.site-header {
+  border-bottom: 1px solid var(--color-primary);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+.hero-content h1 {
+  color: var(--color-primary);
+  text-shadow:
+    0 0 12px rgba(0, 240, 255, 0.5),
+    0 0 24px rgba(255, 32, 121, 0.25);
+}
+
+section h2 {
+  color: var(--color-primary);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.flip-card-back {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.3) inset;
+}
+
+.github-link {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.github-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5);
+}
+
+.btn-submit {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.btn-submit:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.5);
+}
+
+.form-field input,
+.form-field textarea {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.2);
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Oculta visualmente pero mantiene accesible para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Foco visible para accesibilidad (teclado) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   HEADER / NAV
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 1.5rem;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Subrayado animado al hover */
+.main-nav a {
+  position: relative;
+  padding-block: 0.25rem;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-fast);
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+  width: 100%;
+}
+
+.github-link {
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.github-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Menú hamburguesa: oculto en desktop */
+.menu-toggle,
+.menu-btn {
+  display: none;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  min-height: 60vh;
+  text-align: left;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+/* Cursor de terminal parpadeante, coherente con la estética cyberpunk */
+.cursor {
+  display: inline-block;
+  color: var(--color-accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-tagline {
+  max-width: 32rem;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: clamp(160px, 22vw, 260px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 24px rgba(0, 240, 255, 0.35);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   HABILIDADES
+   ========================================================= */
+.skills-group {
+  margin-bottom: 2.5rem;
+}
+
+.skills-group h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-text);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.skill-card i {
+  font-size: 2.2rem;
+  transition:
+    filter var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+/* El ícono de GitHub de Devicon es negro sólido: se invierte a blanco
+   para que sea visible sobre el fondo oscuro */
+.skill-card .devicon-github-original {
+  filter: invert(1);
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 16px rgba(255, 32, 121, 0.35);
+}
+
+.skill-card:hover i {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 8px rgba(255, 32, 121, 0.6));
+}
+
+.skill-card:hover .devicon-github-original {
+  filter: invert(1) drop-shadow(0 0 8px rgba(255, 32, 121, 0.6));
+}
+
+/* =========================================================
+   PROYECTOS (humorada)
+   ========================================================= */
+.projects {
+  text-align: center;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.project-item {
+  max-width: 22rem;
+  width: 100%;
+}
+
+.projects-meme {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-inline: auto;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+
+.projects-caption {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+/* =========================================================
+   SOBRE MÍ — flip cards
+   ========================================================= */
+.sobre-mi-intro {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.sobre-mi h3 {
+  margin-block: 2rem 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.flip-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.flip-card {
+  aspect-ratio: 2 / 3;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-medium);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+.contact {
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 32rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field textarea {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.btn-submit:hover {
+  transform: scale(1.05);
+  background-color: var(--color-accent);
+}
+
+/* =========================================================
+   REGALO — easter egg (CSS-only, checkbox+label)
+   ========================================================= */
+.gift {
+  text-align: center;
+}
+
+.gift-toggle {
+  display: none;
+}
+
+.gift-btn {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.gift-reveal {
+  max-width: 22rem;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows var(--transition-medium),
+    opacity var(--transition-medium);
+}
+
+.gift-reveal-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.gift-toggle:checked ~ .gift-reveal {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 2.5rem;
+}
+
+.gift-image {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+  margin-inline: auto;
+}
+
+.gift-caption {
+  margin-top: 1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+/* Cuando el regalo está abierto, ocultamos el botón para que no quede
+   flotando arriba de la imagen revelada */
+.gift-toggle:checked ~ .gift-btn {
+  display: none;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE — menú hamburguesa CSS-only
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-name {
+    align-items: center;
+  }
+
+  .hero-tagline {
+    margin-inline: auto;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition:
+      transform var(--transition-fast),
+      opacity var(--transition-fast);
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(75vw, 300px);
+    background-color: var(--color-bg);
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform var(--transition-medium);
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .menu-toggle:checked ~ .main-nav {
+    transform: translateX(0);
+  }
+
+  /* Animación de la hamburguesa a "X" */
+  .menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+  }
+
+  .menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+  }
+}

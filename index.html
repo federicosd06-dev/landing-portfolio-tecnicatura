@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Federico Acosta Maneiro | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Federico Acosta Maneiro, estudiante de la Tecnicatura en Desarrollo de Software."
+    />
+
+    <!-- Google Fonts: Orbitron (display) + Space Mono (body) — estética cyberpunk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Devicon: iconos de tecnologías, solo CSS/font, sin JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- Menú hamburguesa 100% CSS (checkbox oculto + label) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label
+          for="menu-toggle"
+          class="menu-btn"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li>
+              <a
+                href="https://github.com/federicosd06-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub
+                <span class="sr-only">(se abre en una pestaña nueva)</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== HERO / PRESENTACIÓN ===== -->
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <h1 class="hero-name">
+            <span>Federico</span>
+            <span>Acosta</span>
+            <span>Maneiro<span class="cursor" aria-hidden="true">_</span></span>
+          </h1>
+          <p class="hero-tagline">
+            Hincha de River, estudiante de la Tecnicatura en Desarrollo de
+            Software. Me motiva brindar soluciones eficientes y efectivas.
+          </p>
+        </div>
+
+        <div class="hero-photo">
+          <img
+            src="/assets/img/perfil.jpeg"
+            alt="Foto de perfil de Federico Acosta Maneiro"
+          />
+        </div>
+      </section>
+
+      <!-- ===== HABILIDADES ===== -->
+      <section id="habilidades" class="skills">
+        <h2>Habilidades</h2>
+
+        <div class="skills-group">
+          <h3>Técnicas</h3>
+          <ul class="skills-cards">
+            <li class="skill-card">
+              <i class="devicon-java-plain colored"></i><span>Java</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-spring-plain colored"></i
+              ><span>Spring Boot</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-kotlin-plain colored"></i><span>Kotlin</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-csharp-plain colored"></i><span>C#</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-mysql-plain colored"></i><span>MySQL</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-postman-plain colored"></i><span>Postman</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-html5-plain colored"></i><span>HTML</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-css3-plain colored"></i><span>CSS</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-javascript-plain colored"></i
+              ><span>JavaScript</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-react-original colored"></i><span>React</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-bootstrap-plain colored"></i
+              ><span>Bootstrap</span>
+            </li>
+            <li class="skill-card">
+              <i class="devicon-github-original colored"></i><span>GitHub</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skills-group">
+          <h3>Blandas</h3>
+          <ul class="skills-cards">
+            <li class="skill-card">Liderazgo</li>
+            <li class="skill-card">Comunicación</li>
+            <li class="skill-card">Resolución de problemas</li>
+            <li class="skill-card">Trabajo en equipo</li>
+            <li class="skill-card">Adaptabilidad</li>
+            <li class="skill-card">Gestión del tiempo</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== PROYECTOS ===== -->
+      <section id="proyectos" class="projects">
+        <h2>Mis Proyectos</h2>
+
+        <div class="projects-content">
+          <div class="project-item">
+            <p class="projects-caption">Acá pondría mis proyectos...</p>
+            <img
+              src="/assets/img/meme1.jpg"
+              alt="Meme humorístico, primera parte: acá pondría mis proyectos"
+              class="projects-meme"
+            />
+          </div>
+
+          <div class="project-item">
+            <p class="projects-caption">
+              ...SI TUVIERA ALGUNO PRESENTABLE!!!!!!
+            </p>
+            <img
+              src="/assets/img/meme2.jpg"
+              alt="Meme humorístico, segunda parte: si tuviera alguno presentable"
+              class="projects-meme"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SOBRE MÍ (sección libre) ===== -->
+      <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre mí</h2>
+
+        <h3>Películas favoritas</h3>
+        <ul class="flip-cards">
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/bladerunner.jpg"
+                  alt="Imagen de Blade Runner"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Blade Runner (1982): Cyberpunk lleno de matices. El monólogo
+                  final fue improvisado. Me atrapaste, es cine.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/halloween.jpg"
+                  alt="Imagen de Halloween 2"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Halloween 2 (1981): Te gustan el terror psicológico o el
+                  slasher? Tenés que verla. No te gustan? Entonces
+                  definitivamente tenés que verla.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/levedad.avif"
+                  alt="Imagen de La Insoportable Levedad del Ser"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  La Insoportable Levedad del Ser (1988): Titanic? Orgullo y
+                  Prejuicio? Nono, esta es la mejor película romántica de la
+                  historia.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/requiem.jpg"
+                  alt="Imagen de Requiem for a Dream"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Requiem for a Dream (2000): Detrás de la fachada de un drama,
+                  se esconde una película de terror urbano.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/acacolgado.jpg"
+                  alt="Imagen de El Abogado del Diablo"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>El Abogado del Diablo (1997): Al Pacino farmeando aura.</p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/escalera.jpg"
+                  alt="Imagen de La Escalera de Jacob"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  La Escalera de Jacob (1990): No, no es terror. Es un drama
+                  psicológico de culto.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/top secret.jpg"
+                  alt="Imagen de Top Secret!"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>Top Secret! (1984): Una comedia absurda.</p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="/assets/img/martyrs.jpg" alt="Imagen de Martyrs" />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Martyrs (2008): Detrás de la fachada de una película brutal se
+                  esconde una historia de amor y existencialismo.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/thegodfather.jpg"
+                  alt="Imagen de The Godfather"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>The Godfather (1972): Marlon Brando farmeando aura.</p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/fightclub.jpg"
+                  alt="Imagen de Fight Club"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Fight Club (1999): Comedia nihilista? Drama psicológico?
+                  Decime vos.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h3>Artistas favoritos</h3>
+        <ul class="flip-cards">
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/souvlaki.jpg"
+                  alt="Tapa del álbum Souvlaki de Slowdive"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>Slowdive - Souvlaki: Pilar etéreo del shoegaze.</p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/loveless.jpg"
+                  alt="Tapa del álbum Loveless de My Bloody Valentine"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  My Bloody Valentine - Loveless: Pilar ruidoso del shoegaze.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/nowhere.jpg"
+                  alt="Tapa del álbum Nowhere de Ride"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>Ride - Nowhere: Pilar alternativo del shoegaze.</p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/worldisyours.jpg"
+                  alt="Tapa del álbum World is Yours de Mass of the Fermenting Dregs"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Mass of the Fermenting Dregs - World is Yours: Como refrescar
+                  el shoegaze con estridencia.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/chrome.jpg"
+                  alt="Tapa del álbum Chrome de Catherine Wheel"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Catherine Wheel - Chrome: Conocés Iron Maiden? Bueno este es
+                  el otro Dickinson, pero haciendo shoegaze.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/swirlies.jpg"
+                  alt="Tapa del álbum Blonder Tongue Audio Baton de Swirlies"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Swirlies - Blonder Tongue Audio Baton: El lado más punk del
+                  shoegaze.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/sirensandsatellites.jpg"
+                  alt="Tapa del álbum Sirens and Satellites de SPC ECO"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  SPC ECO - Sirens and Satellites: El ex-Curve y su hija
+                  mixeando el shoegaze y la electrónica.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/flyingsaucer.jpg"
+                  alt="Tapa del álbum Flying Saucer Attack de Flying Saucer Attack"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Flying Saucer Attack - Flying Saucer Attack: Shoegaze
+                  espacial. Sin más.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/bjm.jpg"
+                  alt="Tapa del álbum Methodrone de The Brian Jonestown Massacre"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  The Brian Jonestown Massacre - Methodrone: Shoegaze y
+                  psicodelia.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="/assets/img/boweryelectric.jpg"
+                  alt="Tapa del álbum Beat de Bowery Electric"
+                />
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Bowery Electric - Beat: Meté shoegaze y trip-hop en una
+                  licuadora.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ===== CONTACTO ===== -->
+      <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>
+          ¿Querés escribirme? Dejá tus datos acá (formulario de demostración,
+          sin envío real).
+        </p>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="form-field">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Escribí lo que quieras..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+      </section>
+
+      <!-- ===== REGALO (easter egg, CSS-only, sin JS) ===== -->
+      <section id="regalo" class="gift">
+        <h2>Si llegaste hasta acá, te dejo un regalo</h2>
+
+        <input type="checkbox" id="gift-toggle" class="gift-toggle" />
+        <label for="gift-toggle" class="btn-submit gift-btn"
+          >Abrir regalo</label
+        >
+
+        <div class="gift-reveal">
+          <div class="gift-reveal-inner">
+            <img
+              src="/assets/img/gallardo.jpg"
+              alt="Imagen de Marcelo Gallardo"
+              class="gift-image"
+            />
+            <p class="gift-caption">
+              Felicidades, encontraste al muñeco Gallardo de la suerte. +1000
+              aura
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <a
+        href="https://github.com/federicosd06-dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="github-link"
+      >
+        GitHub
+        <span class="sr-only">(se abre en una pestaña nueva)</span>
+      </a>
+      <p>&copy; 2026 Federico Acosta Maneiro. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
